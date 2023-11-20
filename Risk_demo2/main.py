@@ -27,10 +27,3 @@ if __name__ == "__main__":
 
     # Start the game
     game_controller.start_game()
-
-    # After the game is over
-    #game_controller.end_game()
-
-    
-    
-
