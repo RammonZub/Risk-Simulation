@@ -8,9 +8,9 @@ if __name__ == "__main__":
   
     # Initialize AI Player
     players = [
-        Player("alice"),
-        Player("bob"),
-        Player("jack"),
+        Player("Jamie"),
+        Player("Bob"),
+        Player("Jack"),
 
     ]
 
@@ -26,4 +26,4 @@ if __name__ == "__main__":
     execute_reinforcement_phase(players)
 
     # Start the game
-    game_controller.start_game()
+    game_controller.start_game()    

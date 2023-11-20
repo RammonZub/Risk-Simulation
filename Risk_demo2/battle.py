@@ -67,21 +67,6 @@ class Battle(threading.Thread):
             print(f"{self.current_player.name} couldn't conquer {self.defender_territory.name}.")
             print(f"- {self.current_player.name} lost {self.lost_troops_attacker} troops.")
             print(f"- {self.defender_territory.owner.name} lost {self.lost_troops_defender} troops.")
-        
-        '''if self.winner:
-            print(f"Battle won by {self.winner.name}.")
-            if self.winner == self.current_player:
-                print(f"{self.current_player.name} has successfully conquered {self.defender_territory.name}.")
-                print(f"- {self.current_player.name} lost {self.lost_troops_attacker} troops.")
-                print(f"- {self.defender_territory.owner.name} lost {self.lost_troops_defender} troops.")
-            else:
-                print(f"{self.current_player.name} didn't conquer {self.defender_territory.name}.")
-                print(f"- {self.current_player.name} lost {self.lost_troops_attacker} troops.")
-                print(f"- {self.defender_territory.owner.name} lost {self.lost_troops_defender} troops.")
-        else:
-            print(f"Battle lost by {self.current_player.name}.")
-            print(f"- {self.current_player.name} lost all attacking troops.")'''
-
 # You can add any additional methods or logic if needed
 
 

@@ -73,7 +73,7 @@ class Player:
 
 
     def fortify(self):
-        time.sleep(0.09)
+        time.sleep(0.04)
         print(f"\n- - Fortification Phase - -")
         if not self.territories:
             print(f"{self.name} has no territories to fortify.")
