@@ -1,4 +1,4 @@
-The game.py file in your project defines the GameController class and two functions, assign_territories_to_players and execute_reinforcement_phase, which together control the gameplay and logic of your Risk-like game. Here's a breakdown of each component:
+The game.py file defines the GameController class and two functions, assign_territories_to_players and execute_reinforcement_phase, which together control the gameplay and logic of the game.
 
 #Class: GameController
 ## Constructor __init__(self, players, board):
@@ -40,4 +40,3 @@ The game.py file in your project defines the GameController class and two functi
 - The execute_reinforcement_phase function allows players to reinforce their territories with additional troops at the beginning of the game.
 
 
-This structure provides a comprehensive system for managing the different aspects of the game, from starting conditions to the progression of each round and the eventual determination of the winner. The use of threading in play_turn suggests that the game is designed to handle simultaneous actions, adding complexity and depth to the gameplay.
