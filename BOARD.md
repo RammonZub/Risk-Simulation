@@ -1,4 +1,4 @@
-The board.py file in your project defines two main classes, Territory and Board, which together represent the game board and its individual territories. Here's a detailed breakdown of each class and its methods:
+The board.py Defines two main classes, Territory and Board, which together represent the game board and its individual territories. 
 
 # Class: Territory
 ## Constructor __init__(self, name):
@@ -55,6 +55,5 @@ The board.py file in your project defines two main classes, Territory and Board,
 # Additional Function: initialize_board()
 - Initializes the game board with predefined territories and their adjacencies.
 
-Main Block for Testing
-Used to create an instance of the board, shuffle territories, and print them for testing purposes.
-This structure allows for a dynamic representation of a game board, where territories can be added, their adjacencies defined, and random events applied. The Territory class provides a way to manage individual territories, including their owners, troop numbers, and relationships to other territories. The Board class manages the overall state of the game board, providing functions to manipulate and query its state. The setup of territories and adjacencies in the initialize_board function appears to be specific to a map of Colombia.
+
+The Board class manages the overall state of the game board, providing functions to manipulate and query its state. 
