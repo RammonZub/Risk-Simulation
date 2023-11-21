@@ -1,4 +1,4 @@
-The player.py file defines the Player class, which represents the players in your Risk-like game simulation. The class encapsulates the logic for player actions like placing troops, attacking, and fortifying territories, as well as handling their turn. Here's a breakdown of the class and its methods:
+The player.py defines the Player class, which represents the players in the game simulation. The class encapsulates the logic for player actions like placing troops, attacking, and fortifying territories, as well as handling their turn.
 
 # Class: Player
 ## Constructor __init__(self, name):
