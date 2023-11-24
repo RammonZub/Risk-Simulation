@@ -78,17 +78,18 @@ class Board:
 # Adding Colombia territories 
 def initialize_board():
     board = Board()
-    colombia_territories = ['Amazonas', 'Antioquia', 'Bolivar', 'Boyaca', 'Caldas', 'Cundinamarca']  # Add 'Cundinamarca' territory
-    for territory_name in colombia_territories:
-        board.add_territory(territory_name)
+    european_countries = ['France', 'Germany', 'Italy', 'Spain', 'United Kingdom']
+    for country_name in european_countries:
+        board.add_territory(country_name)
 
     # Set adjacencies 
-    board.set_adjacencies('Amazonas', ['Antioquia', 'Bolivar'])
-    board.set_adjacencies('Antioquia', ['Bolivar', 'Boyaca'])
-    board.set_adjacencies('Bolivar', ['Caldas'])
-    board.set_adjacencies('Cundinamarca', ['Boyaca', 'Caldas'])  # Set adjacencies for 'Cundinamarca'
-    return board
+    board.set_adjacencies('France', ['Germany', 'Spain'])
+    board.set_adjacencies('Germany', ['France', 'Italy'])
+    board.set_adjacencies('Italy', ['Germany', 'Spain', 'United Kingdom'])
+    board.set_adjacencies('Spain', ['France', 'Italy'])
+    board.set_adjacencies('United Kingdom', ['Italy'])
 
+    return board
 
 
 # Testing purposes only.
