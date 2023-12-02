@@ -77,12 +77,13 @@ class GameController:
         # Trigger a random event 
         self.trigger_random_event_maybe()
 
-        # Execute the turn using a new thread
-        turn_thread = threading.Thread(target=self.execute_ai_turn, args=(player,))
-        turn_thread.start()
+        # Execute the turn using a new thread with a lock
+        with self.lock:
+            turn_thread = threading.Thread(target=self.execute_ai_turn, args=(player,))
+            turn_thread.start()
 
-        # Wait for the turn thread to finish before proceeding
-        turn_thread.join()
+            # Wait for the turn thread to finish before proceeding
+            turn_thread.join()
 
 
     def start_game(self):

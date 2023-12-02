@@ -66,7 +66,7 @@ class Board:
             troops_to_remove = max(1, int(affected_territory.troops * (reduction_percentage / 100.0)))
 
             affected_territory.troops -= troops_to_remove
-            print(f"A {event} occurred in {affected_territory.name}. {troops_to_remove} troops were lost.")
+            print(f"A {event} occurred in {affected_territory.name} and lost {troops_to_remove} troops.")
         else:
             print("No territories with troops to affect.")
 

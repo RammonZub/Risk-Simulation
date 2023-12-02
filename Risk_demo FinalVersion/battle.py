@@ -27,8 +27,7 @@ class Battle(threading.Thread):
 
             with shared_lock:
                 self.update_game_state()
-
-            self.print_battle_outcome()
+                self.print_battle_outcome()
 
         except Exception as e:
             print(f"An error occurred during the battle: {e}")
@@ -49,24 +48,26 @@ class Battle(threading.Thread):
             self.transfer_territory_ownership()
 
     def transfer_territory_ownership(self):
+        #ownership from defender to attacker
         old_owner = self.defender_territory.owner
         self.defender_territory.set_owner(self.current_player)
         old_owner.territories.remove(self.defender_territory)
         self.current_player.territories.append(self.defender_territory)
+        #updated troops in conquered territory
         remaining_troops = max(1, self.attacking_troops - self.lost_troops_attacker)
         self.defender_territory.update_troops(remaining_troops)
 
     def print_battle_outcome(self):
         # Implement logic to print the battle outcome
-        if self.winner == self.current_player:
-            print(f"Battle won by {self.current_player.name}, successfully conquered {self.defender_territory.name}")
-            print(f"- {self.current_player.name} lost {self.lost_troops_attacker} troops.")
-            print(f"- {self.defender_territory.owner.name} lost {self.lost_troops_defender} troops.")
-        else:
-            print(f"Battle lost by {self.current_player.name}.{self.defender_territory.owner.name} won the battle.")
-            print(f"{self.current_player.name} couldn't conquer {self.defender_territory.name}.")
-            print(f"- {self.current_player.name} lost {self.lost_troops_attacker} troops.")
-            print(f"- {self.defender_territory.owner.name} lost {self.lost_troops_defender} troops.")
+            print(f"\nBattle Outcome:")
+            print(f"  Attacking Territory: {self.attacker_territory.name} ")
+            print(f"  Defending Territory: {self.defender_territory.name} ")
+            print(f"  Initial Attacking Troops: {self.attacking_troops}, Remaining: {self.attacking_troops - self.lost_troops_attacker}")
+            print(f"  Initial Defending Troops: {self.defender_territory.troops + self.lost_troops_defender}, Remaining: {self.defender_territory.troops}")
+            print(f"  Winner: {self.winner.name}")
+            print(f"  Troops Lost\n  Attacker: {self.lost_troops_attacker}, Defender: {self.lost_troops_defender}")
+
+
 # You can add any additional methods or logic if needed
 
 
