@@ -64,7 +64,7 @@ class Player:
         print(f"{self.name} is attacking with {num_troops} troops.")
 
         # Execution of the attack
-        battle = Battle(from_territory, to_territory, num_troops, self)  # Include 'self' as the current player
+        battle = Battle(from_territory, to_territory, num_troops, self)  
         battle.start() # Start the battle as a thread
         battle.join()  # Wait for the battle to finish, enusre the thread is finished before proceeding
         #print(f"Battle initiated between {from_territory.name} and {to_territory.name}.")
