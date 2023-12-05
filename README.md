@@ -12,12 +12,6 @@ This project is a simulation of a Risk-like strategy game, implemented in Python
 ## Setup and Installation
 Provide instructions on how to set up and run your project. Include any dependencies or prerequisites.
 
-
-# Example of setup instructions
-git clone https://github.com/your-github-username/your-repository-name.git
-cd your-repository-name
-python main.py
-
 ## Modules Documentation
 Detailed documentation for each module can be found in the following links:
 - [Battle Module](./BATTLE.md): Handles the battle simulation logic.
